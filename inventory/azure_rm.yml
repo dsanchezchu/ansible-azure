@@ -1,0 +1,14 @@
+---
+plugin: azure.azcollection.azure_rm
+include_vm_resource_groups:
+  - '*'
+auth_source: credential_file
+credential_file: ~/.azure/credentials
+locations:
+  - eastus
+  - westus
+  - centralus
+plain_host_names: true
+keyed_groups:
+  - prefix: tag
+    key: tags
